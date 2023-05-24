@@ -1,0 +1,15 @@
+@import "variables.scss";
+
+.sidemenu-conteiner {
+    min-width: 300px;
+    min-height: 600px;
+
+    background: $backGround;
+}
+
+.maincontent-conteiner {
+    width: 100%;
+    margin: 0px 0px 0px 50px;
+
+    background: $backGround;
+}

@@ -1,0 +1,22 @@
+@import "variables.scss";
+
+.header {
+    height: 100px;
+    width: 100%;
+
+    background: $backGround;
+
+    .header-conteiner {
+        display: flex;
+        justify-content: space-between;
+    
+        font-size: 30px;
+        padding: 20px 0px 20px 0px;
+    }
+
+    .header-logo-conteiner {
+        display: flex;
+        justify-content: center;
+    }
+}
+

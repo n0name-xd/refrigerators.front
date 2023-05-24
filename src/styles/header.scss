@@ -4,7 +4,7 @@
     height: 100px;
     width: 100%;
 
-    background: $backGround;
+    background: $black;
 
     .header-conteiner {
         display: flex;
@@ -17,6 +17,40 @@
     .header-logo-conteiner {
         display: flex;
         justify-content: center;
+        height: 100%;
+        align-items: center;
+    }
+
+    .header-logo-item {
+        margin: 0px 30px 0px 0px;
+    }
+
+    .header-logo-title {
+        h3 {
+            font-size: 30px;
+            color: $white;
+        }
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    .nav-conteiner {
+        display: flex;
+
+        a {
+            color: $white;
+            font-size: 20px;
+            margin: 0px 0px 0px 20px;
+            text-decoration: none;
+        }
+    
+        a {
+    
+        }
     }
 }
 

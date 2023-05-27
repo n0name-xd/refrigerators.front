@@ -59,3 +59,68 @@
 }
 
 // main content /\
+
+// contacts \/
+
+.contacts-conteiner {
+    padding: $paddingTop;
+
+    h2 {
+        font-size: 30px;
+    }
+
+    p {
+        margin: 20px 0px;
+        padding: 0;
+        font-size: 20px;
+    }
+
+    ul {
+        margin-top: 20px;
+        margin-left: 30px;
+    }
+
+    li {
+        margin: 20px 0px;
+        padding: 0;
+        font-size: 20px;
+    }
+
+    .contacts-link-img-wrapper {
+        display: flex;
+        align-items: center;
+        padding-top: 30px;
+
+        .red-one {
+            margin-left: 0px;
+            transform: rotate(90deg);
+        }
+
+        .red-two {
+            margin-left: 0px;
+            transform: rotate(-90deg);
+        }
+    }
+}
+
+.contacts__flex {
+    display: flex;
+    align-items: center;
+
+}
+
+.contacts-tiny-link {
+    margin-top: 28px;
+    height: 100%;
+    a {
+        font-size: 5px;
+        text-decoration: none;
+        color: blue;
+    }
+}
+
+.contacts__padding {
+    margin-top: 30px;
+}
+   
+// contacts /\

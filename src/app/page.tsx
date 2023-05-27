@@ -1,22 +1,32 @@
 import { Main } from "@/components/main/Main";
+import axios from "axios";
 
-const getPosts = async () => {
-    const data = await fetch('https://jsonplaceholder.typicode.com/todos/1')
-
-    return data.json();
+export interface ICMSFridgeItem {
+    id: number;
+    attributes: {
+        name: string;
+        description: string;
+        createdAt: string;
+        updatedAt: string;
+        publishedAt: string;
+    }
 }
+
+const getFridges = async (): Promise<Array<ICMSFridgeItem>> => {
+    const res = await axios.get("http://localhost:1337/api/fridges");
+
+    return res.data.data;
+};
 
 const Home = async (): Promise<JSX.Element> => {
 
-    const data = await getPosts();
+    await getFridges();
 
     return (
         <main>
             <Main />
         </main>
-    )
-}
+    );
+};
 
 export default Home;
-
-

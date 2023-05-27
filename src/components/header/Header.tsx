@@ -1,7 +1,14 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image";
+import { Navigation } from "./Navigation";
+
+const NavLiks = [
+    { label: "Главная", href: "/" },
+    { label: "Услуги", href: "/services" },
+    { label: "Контакты", href: "/contacts" }
+];
 
 export const Header: React.FC = (): JSX.Element => {
+
     return (
         <header className="header">
             <div className="wrapper">
@@ -14,17 +21,9 @@ export const Header: React.FC = (): JSX.Element => {
                             <h3>Без прусака и жизнь плоха</h3>
                         </div>
                     </div>
-                    <div>
-                        <nav>
-                            <div className='nav-conteiner'>
-                                <div><Link href='/'>Главная</Link></div>
-                                <div><Link href='/services'>Услуги</Link></div>
-                                <div><Link href='/contacts'>Контакты</Link></div>
-                            </div>
-                        </nav>
-                    </div>
+                    <Navigation links={NavLiks} />
                 </div>
             </div>
         </header>
-    )
-}
+    );
+};

@@ -9,10 +9,22 @@
 }
 
 .sidemenu-conteiner {
-    min-width: 300px;
+    max-width: 350px;
     min-height: 600px;
+    padding: 25px;
 
     background: $backGround;
+}
+
+.sidemenu-categories {
+    display: grid;
+    gap: 25px;
+}
+
+.sidemenu-link {
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
 }
 
 // side menu /\
@@ -122,5 +134,30 @@
 .contacts__padding {
     margin-top: 30px;
 }
+
+.yandex-map__padding {
+    margin-bottom: 40px;
+}
    
 // contacts /\
+
+//Warranty \/
+
+.warranty {
+    padding-top: 100px;
+    text-align: center;
+
+    h1 {
+        font-size: 50px;
+        color: red;
+        margin-bottom: 100px;
+    }
+
+    a {
+        font-size: 25px;
+        color: blue;
+        text-decoration: none;
+    }
+}
+
+//Warranty /\

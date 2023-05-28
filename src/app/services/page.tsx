@@ -4,12 +4,11 @@ const Services: React.FC = () => {
     return (
         <div className="wrapper">
             <SideMenu>
-                <div>
+                <div className="">
                     Услуги
                 </div>
             </SideMenu>
         </div>
-
     );
 };
 

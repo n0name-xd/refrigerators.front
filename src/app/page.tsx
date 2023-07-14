@@ -1,5 +1,5 @@
 import { Main } from "@/components/main/Main";
-import axios from "axios";
+// import axios from "axios";
 
 export interface ICMSFridgeItem {
     id: number;
@@ -12,15 +12,15 @@ export interface ICMSFridgeItem {
     }
 }
 
-const getFridges = async (): Promise<Array<ICMSFridgeItem>> => {
-    const res = await axios.get("http://localhost:1337/api/fridges");
+// const getFridges = async (): Promise<Array<ICMSFridgeItem>> => {
+// const res = await axios.get("http://localhost:1337/api/fridges");
 
-    return res.data.data;
-};
+// return res.data.data;
+// };
 
 const Home = async (): Promise<JSX.Element> => {
 
-    await getFridges();
+    // await getFridges();
 
     return (
         <main>

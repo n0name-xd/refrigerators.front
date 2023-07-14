@@ -27,6 +27,10 @@
     font-size: 20px;
 }
 
+.category_active {
+    color: black;
+}
+
 // side menu /\
 
 // main content \/
@@ -160,4 +164,35 @@
     }
 }
 
-//Warranty /\
+//Warranty /\ 
+
+.service__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 20px;
+}
+
+.frige-card {
+    width: 100%;
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.frige-card__wrapper {
+    display: flex;
+}
+
+.frige-card__img {
+    width: 150px;
+    height: 150px;
+}
+
+.frige-card__description {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

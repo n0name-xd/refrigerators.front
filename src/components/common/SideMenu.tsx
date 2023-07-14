@@ -1,40 +1,37 @@
 "use client";
 
+import { EnumServiceCategory } from "@/app/services/page";
+import { Dispatch, SetStateAction } from "react";
+
 export interface ISideMenuProps {
-    children: React.ReactNode
+    children: React.ReactNode;
+    setCategory: Dispatch<SetStateAction<EnumServiceCategory>>;
+    categoryLIst: Array<EnumServiceCategory>;
+    activeCategory: EnumServiceCategory;
 }
 
-const servicesList = [
-    { category: "frige", name: "Холодильники" },
-    { category: "accessories", name: "Запчасти и комплектующие для холодильников" },
-    { category: "servises", name: "Услуги" },
-];
-
 export const SideMenu: React.FC<ISideMenuProps> = ({
-    children
+    children,
+    setCategory,
+    categoryLIst,
+    activeCategory,
 }): JSX.Element => {
 
-    const handleCategiry = (cat: string) => {
-
-        return cat;
-    };
+    const categoryLinksArray = categoryLIst.map((el: EnumServiceCategory) => {
+        return <div
+            key={el}
+            className={`${activeCategory === el ? "category_active" : ""} sidemenu-link`}
+            onClick={() => setCategory(el)}
+        >
+            {el}
+        </div>;
+    });
 
     return (
         <div className="side-menu-wrapper">
             <div className="sidemenu-conteiner">
                 <div className="sidemenu-categories">
-                    {servicesList.map((el: { name: string, category: string }) => {
-                        return (
-                            <div
-                                className="sidemenu-link"
-                                onClick={() => handleCategiry(el.category)}
-                                key={el.category}
-                            >
-                                {el.name}
-
-                            </div>
-                        );
-                    })}
+                    {categoryLinksArray}
                 </div>
             </div>
             {children}
